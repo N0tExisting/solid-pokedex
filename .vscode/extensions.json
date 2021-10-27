@@ -1,0 +1,24 @@
+{
+	"recommendations": [
+		"aaron-bond.better-comments",
+		"streetsidesoftware.code-spell-checker",
+		"editorconfig.editorconfig",
+		"bierner.markdown-checkbox",
+		"bierner.markdown-emoji",
+		"davidanson.vscode-markdownlint",
+		"esbenp.prettier-vscode",
+		"bernardogualberto.solidjs",
+		"mrmlnc.vscode-attrs-sorter",
+		"shardulm94.trailing-spaces",
+		"voorjaar.windicss-intellisense",
+		"vguegan.aquilon",
+		"formulahendry.auto-rename-tag",
+		"formulahendry.auto-close-tag",
+		"gwenio.vscode-ava-test-adapter",
+		"samverschueren.ava",
+		"dbaeumer.vscode-eslint"
+	],
+	"unwantedRecommendations": [
+		"heybourn.headwind"
+	]
+}

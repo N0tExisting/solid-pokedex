@@ -1,0 +1,29 @@
+{
+	"reporter": [
+		"text",
+		"text-summary",
+
+		"clover",
+		"cobertura",
+		"html",
+		"json",
+		"json-summary",
+		"lcov"
+	],
+	"include": [
+		"**/src/**/*.ts",
+		"**/src/**/*.tsx",
+		"**/src/**/*.jsx",
+		"**/src/**/*.js",
+		"**/src/**/*.cjs",
+		"**/src/**/*.mjs"
+	],
+	"exclude": [
+		"**/node_modules/**/*",
+		"**/dist/**/*",
+		"**/coverage/**/*",
+		"*.config.*",
+		"solid-register-config.js"
+	],
+	"all": true
+}

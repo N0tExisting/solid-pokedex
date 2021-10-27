@@ -1,0 +1,4 @@
+# If you have a Stylelint extension
+**/node_modules/**
+/dist
+*.cjs
