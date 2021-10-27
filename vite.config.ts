@@ -14,6 +14,7 @@ export default defineConfig({
 		polyfillDynamicImport: false,
 		assetsDir: 'static',
 		assetsInlineLimit: 512,
+		sourcemap: true,
 	},
 	cacheDir: 'node_modules/.cache/vite',
 });

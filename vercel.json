@@ -2,13 +2,13 @@
 	"cleanUrls": true,
 	"rewrites": [
 		{
-			"source": "/(.*)",
+			"source": "/((?!static/).*)",
 			"destination": "/index.html"
 		}
 	],
 	"headers": [
 		{
-			"source": "/static/((?!static).*)",
+			"source": "/static/(.*)",
 			"headers" : [
 				{
 					"key" : "Cache-Control",
@@ -29,5 +29,8 @@
 				}
 			]
 		}
-	]
+	],
+	"github": {
+		"silent": true
+	}
 }
