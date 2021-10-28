@@ -11,7 +11,14 @@
 	# If skip_processing = true, all other settings are ignored
 	[build.processing]
 		skip_processing = false
+		[build.processing.js]
+			bundle = false
+			minify = true
+		[build.processing.css]
+			bundle = false
+			minify = true
 		[build.processing.html]
+			minify = true
 			pretty_urls = true
 		[build.processing.images]
 			compress = true

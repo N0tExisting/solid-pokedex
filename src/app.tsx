@@ -25,7 +25,7 @@ const App: Component = () => {
 						</A>
 					</li>
 					<li class='py-2 px-4'>
-						<A href='/error' class='no-underline hover:underline'>
+						<A href='/error/404' class='no-underline hover:underline'>
 							Error
 						</A>
 					</li>

@@ -23,4 +23,6 @@ const routes = Object.keys(pages).map((Path): RouteDefinition => {
 
 routes.push({ path: '**', component: NotFound });
 
+if (import.meta.env.DEV) console.log('Routes:\n', routes);
+
 export default routes;
