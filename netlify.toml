@@ -7,7 +7,7 @@
 	# root directory if a base has not been set. This sample publishes the
 	# directory located at the absolute path "root/project/build-output"
 	publish = "dist/"
-	environment = { NODE_VERSION = "14.x.x" }
+	environment = { NODE_VERSION = "14" }
 	# If skip_processing = true, all other settings are ignored
 	[build.processing]
 		skip_processing = false
