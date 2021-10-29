@@ -1,11 +1,17 @@
 {
 	"parser": "@typescript-eslint/parser",
 	"plugins": [
+		"@typescript-eslint/eslint-plugin",
+		"eslint-plugin-tsdoc",
 		"solid",
 		"prettier"
 	],
 	"extends": [
 		"eslint:recommended",
+    	"plugin:@typescript-eslint/recommended",
 		"plugin:solid/recommended"
-    ]
+    ],
+	"rules": {
+		"tsdoc/syntax": "warn"
+	}
 }
