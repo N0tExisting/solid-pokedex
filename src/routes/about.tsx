@@ -11,7 +11,7 @@ export default function About() {
 	const data = useData();
 
 	return (
-		<section class='bg-pink-100 text-gray-700 p-8'>
+		<section class='bg-gray-100 text-gray-700 p-8 h-full flex content-center justify-center justify-items-center items-center text-center flex-col'>
 			<h1 class='text-2xl font-bold'>About</h1>
 
 			<p class='mt-4'>A page all about this website.</p>

@@ -9,6 +9,11 @@ export default defineConfig({
 		solidPlugin(),
 		WindiCSS(),
 	],
+	server: {
+		watch: {
+			ignored: ['**/coverage/**', '**/dist/**'],
+		},
+	},
 	build: {
 		target: 'esnext',
 		polyfillDynamicImport: false,

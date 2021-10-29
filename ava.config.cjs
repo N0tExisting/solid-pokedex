@@ -3,11 +3,13 @@
  * @type {import('ava').Config}
  */
 module.exports = {
-	files: ['**/test/**/*.test.*'],
+	files: ['tests/**/*.(test|spec).(js|jsx|mjs|cjs|ts|tsx|*)'],
 	failFast: !!process.env.FAIL_FAST,
 	//failWithoutAssertions: false,
 	environmentVariables: {
 		NODE_ENV: 'test',
+		TEST_DOM: 'jsdom',
+		SOLID_IMPORT: 'dev',
 	},
 	verbose: true,
 	require: [

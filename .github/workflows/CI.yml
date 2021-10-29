@@ -3,7 +3,7 @@
 
 name: CI
 
-on: [ push, pull_request, workflow_dispatch ]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
@@ -15,16 +15,58 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
 
-    - name: Install
-      run: yarn install --frozen-lockfile
+      - name: Install
+        run: yarn install --frozen-lockfile
 
-    - name: Build
-      run: yarn build
+      - name: Build
+        run: yarn build
+
+      - name: Upload Build Output
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          # Artifact name
+          name: Build # optional, default is artifact
+          # A file, directory or wildcard pattern that describes what to upload
+          path: ./dist/
+
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    env:
+      FAIL_FAST: "true"
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+
+      - name: Install
+        run: yarn install --frozen-lockfile
+
+      - name: Test
+        run: yarn test
+
+      - name: Upload a Coverage
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          # Artifact name
+          name: Coverage
+          # A file, directory or wildcard pattern that describes what to upload
+          path: ./coverage/

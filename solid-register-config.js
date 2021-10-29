@@ -5,8 +5,8 @@ module.exports = {
 	compile: {
 		css: true,
 	},
-	dom: 'jsdom',
+	dom: process.env['TEST_DOM'] || 'jsdom',
 	aliases: {
-		solid: 'dev',
+		solid: process.env['SOLID_IMPORT'] || 'dev',
 	},
 };
