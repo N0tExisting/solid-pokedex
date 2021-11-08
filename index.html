@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html class="w-screen h-screen dark" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<title>Solid App</title>
+		<link
+			crossorigin="anonymous"
+			rel="stylesheet"
+			href="/src/styles/global.css" />
 		<noscript>
-			<link crossorigin="anonymous" rel="stylesheet" href="/src/styles/noscript.css" />
+			<link
+				crossorigin="anonymous"
+				rel="stylesheet"
+				href="/src/styles/noscript.css" />
 		</noscript>
 	</head>
-	<body>
-		<div id="root">
+	<body class="w-screen h-screen">
+		<div class="w-screen h-screen overflow-visible contain" id="root">
 			<noscript>
 				<h1>You need to enable JavaScript to run this app.</h1>
 			</noscript>
 		</div>
 
-		<script crossorigin="anonymous" src="/src/index.tsx" type="module"></script>
+		<script
+			crossorigin="anonymous"
+			src="/src/index.tsx"
+			type="module"></script>
 	</body>
 </html>

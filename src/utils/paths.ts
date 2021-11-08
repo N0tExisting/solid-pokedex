@@ -11,7 +11,7 @@ export const mapSegment = (seg: string): string => {
 			.map((seg) => mapSegment(`[${seg}]`))
 			.join('/');
 	} else if (seg.startsWith('...')) {
-		return `:${seg.slice(3)}*`;
+		return `*${seg.slice(3)}`;
 	} else {
 		return `:${seg}`;
 	}
@@ -21,5 +21,5 @@ export function mapPath(path: string): string {
 	if (!path.match(/\/\[[^/].*?\](?:\/|$)/im)) {
 		return path;
 	}
-	return path.split('/').map(mapSegment).join('/');
+	return path.split('/').map(mapSegment).flat().join('/');
 }

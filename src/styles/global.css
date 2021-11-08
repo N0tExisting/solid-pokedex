@@ -1,0 +1,4 @@
+.contain {
+	contain: strict;
+	@apply object-contain  overscroll-contain;
+}
