@@ -16,7 +16,9 @@
 		"formulahendry.auto-close-tag",
 		"gwenio.vscode-ava-test-adapter",
 		"samverschueren.ava",
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint",
+		"usernamehw.errorlens",
+		"csstools.postcss"
 	],
 	"unwantedRecommendations": [
 		"heybourn.headwind"

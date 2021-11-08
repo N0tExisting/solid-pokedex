@@ -2,3 +2,4 @@
 /dist
 /coverage
 /*.config.*
+/solid-register-config.js

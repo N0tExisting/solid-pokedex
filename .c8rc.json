@@ -11,17 +11,15 @@
 		"lcov"
 	],
 	"include": [
-		"**/src/**/*.ts",
-		"**/src/**/*.tsx",
-		"**/src/**/*.jsx",
-		"**/src/**/*.js",
-		"**/src/**/*.cjs",
-		"**/src/**/*.mjs"
+		"src/**/*.tsx",
+		"src/**/*.ts",
+		"src/**/*.jsx",
+		"src/**/*.js"
 	],
 	"exclude": [
-		"**/node_modules/**/*",
-		"**/dist/**/*",
-		"**/coverage/**/*",
+		"node_modules/**/*",
+		"dist/**/*",
+		"coverage/**/*",
 		"*.config.*",
 		"solid-register-config.js"
 	],
