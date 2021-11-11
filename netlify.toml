@@ -14,15 +14,14 @@
 		[build.processing.html]
 			minify = true
 			pretty_urls = true
-		# We are using sri-hashing, so we can't post-opimize static assets
 		[build.processing.js]
 			bundle = false
-			minify = false
+			minify = true
 		[build.processing.css]
 			bundle = false
-			minify = false
+			minify = true
 		[build.processing.images]
-			compress = false
+			compress = true
 
 [[redirects]]
 	# Make the SPA Work

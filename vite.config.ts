@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import WindiCSS from 'vite-plugin-windicss';
 //import htmlMinifier from 'rollup-plugin-html-minifier';
-import sri from 'rollup-plugin-sri';
+//import sri from 'rollup-plugin-sri';
 import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 
 export default defineConfig({
@@ -32,13 +32,14 @@ export default defineConfig({
 				processConditionalComments: true,
 			},
 		}),*/
-		{
+		/*{
 			enforce: 'post',
 			...sri({
 				publicPath: '/',
 				algorithms: ['sha1', 'md5', 'sha512', 'sha256'],
 			}),
-		},
+		}*/
+		,
 	],
 	server: {
 		watch: {
