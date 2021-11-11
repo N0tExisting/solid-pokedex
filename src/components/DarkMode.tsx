@@ -52,6 +52,7 @@ export const Toggle: Component = () => {
 		<button
 			title={title()}
 			type='button'
+			class='outline-none focus:outline-none hover:outline-none h-[24px]'
 			onContextMenu={onRightClick}
 			onclick={toggle}>
 			<Switch>

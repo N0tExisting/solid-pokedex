@@ -1,6 +1,6 @@
 export default function About() {
 	return (
-		<section class='bg-gray-100 text-gray-700 p-8 h-full flex content-center justify-center justify-items-center items-center text-center flex-col'>
+		<section class='p-8 h-full flex content-center justify-center justify-items-center items-center text-center flex-col'>
 			<h1 class='text-7xl font-bold'>About</h1>
 
 			<p class='mt-4'>

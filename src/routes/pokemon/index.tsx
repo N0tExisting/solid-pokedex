@@ -27,16 +27,12 @@ const PokemonPage: Component = () => {
 		<main class='flex h-full w-full items-center content-center justify-center justify-items-center flex-col'>
 			<Match>
 				<Matcher when={pokemon.loading}>
-					<section
-						class='align-middle justify-center text-center flex flex-col p-4 bg-light-900 rounded-md m-5' /*  dark:(bg-dark-200 text-light-50) */
-					>
+					<section class='align-middle justify-center text-center flex flex-col p-4 bg-light-900 rounded-md m-5 dark:(bg-dark-200 text-light-50)'>
 						<h1 class='text-6xl'>Loading ...</h1>
 					</section>
 				</Matcher>
 				<Matcher when={pokemon.error && pokemon.error !== null}>
-					<section
-						class='align-middle justify-center text-center flex flex-col p-4 bg-light-900 rounded-md m-5' /*  dark:(bg-dark-200 text-light-50) */
-					>
+					<section class='align-middle justify-center text-center flex flex-col p-4 bg-light-900 rounded-md m-5 dark:(bg-dark-200 text-light-50)'>
 						<h1 class='text-6xl'>Error:</h1>
 						<pre>
 							{() => {

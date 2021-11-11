@@ -16,8 +16,8 @@ const PokemonPreview: Component<PokemonPreviewProps> = (P) => {
 		<section class='m-5'>
 			<A
 				href={`/pokemon/${P.pokemon.name}`}
-				class='align-middle justify-center items-center content-center justify-items-center text-center transform-gpu flex flex-col filter p-4 bg-light-900 text-dark-200 rounded-md drop-shadow-md no-underline underline-blue-500 duration-50 transition-all hover:(underline underline-5 underline-blue-500 drop-shadow-xl -translate-x-1 -translate-y-1)'
-				/* dark:(bg-dark-200 text-light-50) */
+				class='align-middle justify-center items-center content-center justify-items-center text-center transform-gpu flex flex-col filter p-4 bg-light-900 text-dark-200 rounded-md drop-shadow-md no-underline underline-blue-500 duration-50 transition-all hover:(underline underline-5 underline-blue-500 drop-shadow-xl -translate-x-1 -translate-y-1) dark:(bg-dark-200 text-light-50)'
+				/*  */
 				title={pokemon()?.name}>
 				<h2 class='text-5xl uppercase'>{`${P.index}. ${P.pokemon.name}`}</h2>
 				<Suspense fallback={<h3 class='text-6xl'>Loading ...</h3>}>
