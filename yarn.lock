@@ -1454,6 +1454,21 @@
     jiti "^1.12.9"
     windicss "^3.2.1"
 
+"@windicss/plugin-interaction-variants@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@windicss/plugin-interaction-variants/-/plugin-interaction-variants-1.0.0.tgz#11e412c6fd653899f6cced4e4f7b402eb5456981"
+  integrity sha512-jk0kvJEwphPlzjgCASxi0yCrLIrMPBHKTjPB1vF2LZsmWVaIPhKQRfpJW6+G093ipDos1E2BkevDrh/R2Ln8gg==
+
+"@windicss/plugin-question-mark@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@windicss/plugin-question-mark/-/plugin-question-mark-0.1.1.tgz#437de5bbd1e27432a4693def2fba2f1a335b8876"
+  integrity sha512-LTnySh28mFncJqCw7VjZzYD3HkJynjHQ8wAIgsZUPTi8WzDJtUeYyFc8/ImXGL/jon55zzg9yy9y/lUyCvvrmA==
+
+"@windicss/plugin-scrollbar@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@windicss/plugin-scrollbar/-/plugin-scrollbar-1.2.3.tgz#4796e999e98a4bca6c269fa1faffd2e9b5452cac"
+  integrity sha512-+cqv1pEmaNPITeBJ/lO6tc8IjBzRhQ+V9G8r249MMXivYoxUO4DtModBrRGHVvBgsYZgPXDsIv2jqtxc4NqYEg==
+
 "@windicss/plugin-utils@1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@windicss/plugin-utils/-/plugin-utils-1.5.1.tgz#9750bb72e8c14585e011d46a33351d47d8519e31"
@@ -4568,6 +4583,11 @@ solid-app-router@^0.1.11:
   version "0.1.11"
   resolved "https://registry.yarnpkg.com/solid-app-router/-/solid-app-router-0.1.11.tgz#43228fda5325936f102d4a3a037e30a3ac289607"
   integrity sha512-O0Gp2MhsqMJCDFzMNEH1rjpKFIFXO+0pX12AwTDYXQVnGwscbjD0ysAtyvjgXZAcj2udbYEL4uR5IgnJfI3YKw==
+
+solid-icons@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.3.2.tgz#70c6f310c0e34bf17544aa98a1aaedf8021482b8"
+  integrity sha512-pS5HkaI0nVLxAXQ+JVIz9hIJy4COO+3dLptP+3ifHoX1FvTU//3E8/G0PQjUCIHrscgqantGtmazGKWjsnNE3Q==
 
 solid-js@^1.2.2:
   version "1.2.2"

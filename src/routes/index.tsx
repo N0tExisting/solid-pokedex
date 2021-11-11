@@ -1,28 +1,16 @@
-import { createSignal } from 'solid-js';
+import { Link as A } from 'solid-app-router';
 
 export default function Home() {
-	const [count, setCount] = createSignal(0);
-
 	return (
-		<section class='bg-gray-100 text-gray-700 p-8'>
-			<h1 class='text-2xl font-bold'>Home</h1>
-			<p class='mt-4'>This is the home page.</p>
-
-			<div class='flex items-center space-x-2'>
-				<button
-					class='border rounded-lg px-2 border-gray-900'
-					onClick={() => setCount(count() - 1)}>
-					-
-				</button>
-
-				<output class='p-10px'>Count: {count}</output>
-
-				<button
-					class='border rounded-lg px-2 border-gray-900'
-					onClick={() => setCount(count() + 1)}>
-					+
-				</button>
+		<main class='flex flex-col align-middle justify-center text-center'>
+			<h1 class='text-6xl'>Pokedex</h1>
+			<div class=''>
+				<section class='m-4'>
+					<A class='p-4' href='/pokemon'>
+						<h2 class='text-5xl link-simple-big'>Pokemon</h2>
+					</A>
+				</section>
 			</div>
-		</section>
+		</main>
 	);
 }

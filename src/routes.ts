@@ -13,6 +13,7 @@ export const data = import.meta.globEager('./routes/**/*.tsx');
 export const pages = import.meta.glob('./routes/**/*.tsx');
 
 const routes = Object.keys(pages).map((Path): RouteDefinition => {
+	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	const rawPath = Path.match(/\.\/routes(\/.*?)(index)?\.tsx/)![1]!;
 	return {
 		path: mapPath(rawPath),

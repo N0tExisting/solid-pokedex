@@ -1,4 +1,12 @@
 .contain {
 	contain: strict;
-	@apply object-contain  overscroll-contain;
+	/* @apply object-contain overscroll-contain; */
+}
+
+.link-simple {
+	@apply underline underline-2 underline-teal-300 hover:(underline-cyan-400 underline-3);
+}
+
+.link-simple-big {
+	@apply underline underline-3 underline-teal-300 hover:(underline-cyan-400 underline-4);
 }

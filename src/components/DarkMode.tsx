@@ -1,4 +1,6 @@
-import { createSignal, Component, createEffect } from 'solid-js';
+import { Component, createEffect, Switch, Match, createMemo } from 'solid-js';
+import { FiSun, FiMoon } from 'solid-icons/fi';
+import createRootedSignal from '../utils/reactivity/rooted_signal';
 
 const InitialDarkMode = (): boolean => {
 	const stored = localStorage.getItem('color-scheme');
@@ -11,31 +13,63 @@ const InitialDarkMode = (): boolean => {
 	}
 };
 
-const [darkMode, setDarkMode] = createSignal(InitialDarkMode());
+const [darkMode, setDarkMode] = createRootedSignal(
+	InitialDarkMode(),
+	(darkMode) => {
+		createEffect(() => {
+			const isDarkMode = darkMode();
+			console.log('Updating LocalStorage:', isDarkMode);
+			localStorage.setItem('color-scheme', isDarkMode ? 'dark' : 'light');
+		});
+
+		createEffect(() => {
+			const html = document.documentElement;
+			const isDarkMode = darkMode();
+			html.classList.toggle('dark', isDarkMode);
+			console.log('Toggled Class:', isDarkMode);
+		});
+	},
+);
 
 export const getDarkMode = darkMode;
 
-createEffect(() => {
-	const isDarkMode = darkMode();
-	localStorage.setItem('color-scheme', isDarkMode ? 'dark' : 'light');
-});
+const toggle = () => setDarkMode(!darkMode());
 
-createEffect(() => {
-	const html = document.documentElement;
-	const isDarkMode = darkMode();
-	html.classList.toggle('dark', isDarkMode);
-});
+const reset = () =>
+	setDarkMode(!window.matchMedia('(prefers-color-scheme: light)').matches);
 
 export const Toggle: Component = () => {
+	const onRightClick = (e: MouseEvent) => {
+		e.preventDefault();
+		reset();
+	};
+
+	const title = createMemo(
+		() => `Enable ${darkMode() ? 'Light' : 'Dark'} Mode`,
+	);
+
 	return (
-		<button onclick={() => setDarkMode(!darkMode())}>
-			<svg width={32} height={32}>
-				{/* TODO: Fancy svg like that animates between a moon and a star
-				<text>{darkMode() ? 'Dark' : 'Light'}</text> */}
-				<foreignObject>
-					<p>{darkMode() ? 'Dark' : 'Light'}</p>
-				</foreignObject>
-			</svg>
+		<button
+			title={title()}
+			type='button'
+			onContextMenu={onRightClick}
+			onclick={toggle}>
+			<Switch>
+				<Match when={darkMode()}>
+					<FiSun
+						title='Enable Light Mode'
+						class='text-dark-200 dark:(text-light-50)'
+						size={24}
+					/>
+				</Match>
+				<Match when={!darkMode()}>
+					<FiMoon
+						title='Enable Dark Mode'
+						class='text-dark-200 dark:(text-light-50)'
+						size={24}
+					/>
+				</Match>
+			</Switch>
 		</button>
 	);
 };

@@ -1,5 +1,5 @@
 import type { Component } from 'solid-js';
-import { Link as A, useRoutes, useLocation } from 'solid-app-router';
+import { Link as A, useRoutes } from 'solid-app-router';
 import { Meta } from 'solid-meta';
 import routes from './routes';
 import { Toggle } from './components/DarkMode';
@@ -30,6 +30,7 @@ const App: Component = () => {
 							Pokemon
 						</A>
 					</li>
+					{/*
 					<li class='py-2 px-4'>
 						<A href='/pokemon/2' class='no-underline hover:underline'>
 							Ivisaur
@@ -40,6 +41,7 @@ const App: Component = () => {
 							Error
 						</A>
 					</li>
+					*/}
 
 					<li class='text-sm flex items-center space-x-1 ml-auto'>
 						{/*
