@@ -1,7 +1,7 @@
 import { Component, createEffect, Switch, Match, createMemo } from 'solid-js';
 import { FiSun, FiMoon } from 'solid-icons/fi';
 import createRootedSignal from '../utils/reactivity/rooted_signal';
-import styles from './DarkMode.module.css';
+import styles from './darkMode.module.css';
 
 const InitialDarkMode = (): boolean => {
 	const stored = localStorage.getItem('color-scheme');
