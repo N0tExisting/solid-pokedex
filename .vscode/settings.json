@@ -16,6 +16,11 @@
 		"vercel",
 		"vite",
 		"windi",
-		"windicss"
-	]
+		"windicss",
+		"Yeet"
+	],
+	"github-actions.workflows.pinned.workflows": [
+		".github/workflows/CI.yml"
+	],
+	"typescript.tsdk": "node_modules\\typescript\\lib"
 }

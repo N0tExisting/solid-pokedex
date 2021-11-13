@@ -1,6 +1,7 @@
 import { Component, createEffect, Switch, Match, createMemo } from 'solid-js';
 import { FiSun, FiMoon } from 'solid-icons/fi';
 import createRootedSignal from '../utils/reactivity/rooted_signal';
+import styles from './DarkMode.module.css';
 
 const InitialDarkMode = (): boolean => {
 	const stored = localStorage.getItem('color-scheme');
@@ -52,23 +53,15 @@ export const Toggle: Component = () => {
 		<button
 			title={title()}
 			type='button'
-			class='outline-none focus:outline-none hover:outline-none h-[24px]'
+			class={styles.btn}
 			onContextMenu={onRightClick}
 			onclick={toggle}>
 			<Switch>
 				<Match when={darkMode()}>
-					<FiSun
-						title='Enable Light Mode'
-						class='text-dark-200 dark:(text-light-50)'
-						size={24}
-					/>
+					<FiSun title='Enable Light Mode' class={styles.icon} size={24} />
 				</Match>
 				<Match when={!darkMode()}>
-					<FiMoon
-						title='Enable Dark Mode'
-						class='text-dark-200 dark:(text-light-50)'
-						size={24}
-					/>
+					<FiMoon title='Enable Dark Mode' class={styles.icon} size={24} />
 				</Match>
 			</Switch>
 		</button>

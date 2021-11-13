@@ -1,0 +1,18 @@
+.btn {
+	@apply outline-none focus:outline-none hover:outline-none h-[24px];
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.icon {
+	@apply ease-in text-dark-200 dark:(text-light-50);
+	animation-duration: 50ms;
+	animation-name: fade-in;
+}

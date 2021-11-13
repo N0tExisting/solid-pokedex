@@ -1,15 +1,22 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
+import pages from 'vite-plugin-pages-solid';
 import WindiCSS from 'vite-plugin-windicss';
 //import htmlMinifier from 'rollup-plugin-html-minifier';
 //import sri from 'rollup-plugin-sri';
+//import typescript from 'rollup-plugin-typescript2';
 import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 
 export default defineConfig({
 	plugins: [
+		//typescript(),
 		typescriptPaths({ preserveExtensions: true, absolute: false }),
 		solidPlugin(),
 		WindiCSS(),
+		pages({
+			pagesDir: 'src/routes',
+			extensions: ['.jsx', '.tsx'],
+		}),
 		/*htmlMinifier({
 			filter: (file) => {
 				const retVal =

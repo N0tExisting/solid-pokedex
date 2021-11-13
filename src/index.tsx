@@ -1,10 +1,13 @@
 import { render } from 'solid-js/web';
 import { Router } from 'solid-app-router';
 import { MetaProvider } from 'solid-meta';
+//import PokeAPI from 'pokeapi-typescript';
 
 import 'windi.css';
 
 import App from './App';
+
+//queueMicrotask(() => PokeAPI.Pokemon.listAll(true));
 
 render(
 	() => (

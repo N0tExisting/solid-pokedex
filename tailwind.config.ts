@@ -41,6 +41,16 @@ export default defineConfig({
 				'.contain-full': {
 					contain: 'size layout paint style',
 				},
+
+				'.content-visibility-visible': {
+					'content-visibility': 'visible',
+				},
+				'.content-visibility-hidden': {
+					'content-visibility': 'hidden',
+				},
+				'.content-visibility-auto': {
+					'content-visibility': 'auto',
+				},
 			};
 			addUtilities(containUtilities);
 			// FIXME: I have no clue what I'm doing here

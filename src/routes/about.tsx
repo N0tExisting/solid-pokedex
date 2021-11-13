@@ -3,7 +3,7 @@ export default function About() {
 		<section class='p-8 h-full flex content-center justify-center justify-items-center items-center text-center flex-col'>
 			<h1 class='text-7xl font-bold'>About</h1>
 
-			<p class='mt-4'>
+			<p class='mt-4 text-2xl'>
 				This website was made with{' '}
 				<a class='link-simple' href='https://solidjs.com'>
 					Solid.js
