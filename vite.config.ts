@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import legacy from '@vitejs/plugin-legacy';
 import solidPlugin from 'vite-plugin-solid';
 import pages from 'vite-plugin-pages-solid';
 import WindiCSS from 'vite-plugin-windicss';
@@ -17,6 +18,8 @@ export default defineConfig({
 			pagesDir: 'src/routes',
 			extensions: ['.jsx', '.tsx'],
 		}),
+		// https://vitejs.dev/plugins/#vitejs-plugin-legacy
+		legacy(),
 		/*htmlMinifier({
 			filter: (file) => {
 				const retVal =

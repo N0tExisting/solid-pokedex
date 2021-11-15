@@ -1,8 +1,10 @@
 # [Solid.js](https://solidjs.com) Pokedex
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a577c901-ca9f-4033-ab60-42fda8482356/deploy-status)](https://solid-pokedex.netlify.app/)
+[![CI](https://github.com/N0tExisting/solid-pokedex/actions/workflows/CI.yml/badge.svg)](https://github.com/N0tExisting/solid-pokedex/actions/workflows/CI.yml)
 
 ---
+
 A Pokedex built using [Solid.js](https://solidjs.com) & [PokéAPI](https://pokeapi.co/)
 
 ## Development

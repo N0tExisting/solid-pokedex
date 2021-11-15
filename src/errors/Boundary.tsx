@@ -1,11 +1,45 @@
-import { onMount } from 'solid-js';
+import { createEffect, ErrorBoundary, Component } from 'solid-js';
 
-export default function ErrorDisplay(err: unknown, reset: () => void) {
+const defaultOnError = (err: unknown) =>
+	console.error('Caught An Error:\n', err);
+
+export type BoundaryProps = {
+	onError?: (error: unknown) => void;
+};
+
+export const Boundary: Component<BoundaryProps> = function (props) {
+	return (
+		<ErrorBoundary
+			fallback={(err, reset) => (
+				<ErrorDisplay
+					err={err}
+					reset={reset}
+					onError={
+						typeof props.onError === 'function' ? props.onError : defaultOnError
+					}
+				/>
+			)}>
+			{props.children}
+		</ErrorBoundary>
+	);
+};
+
+export type ErrorDisplayProps = {
+	err: unknown;
+	reset: () => void;
+	onError?: (error: unknown) => void;
+};
+
+export const ErrorDisplay: Component<ErrorDisplayProps> = function (props) {
 	const handleClick = (e: MouseEvent) => {
 		e.preventDefault();
-		reset();
+		props.reset();
 	};
-	onMount(() => console.error('Caught An Error:\n', err));
+	createEffect(() =>
+		typeof props.onError === 'function'
+			? props.onError(props.err)
+			: defaultOnError(props.err),
+	);
 	return (
 		<main class='flex h-full w-full items-center content-center justify-center justify-items-center bg-gray-100 text-gray-700 dark:(text-gray-100 bg-gray-700)'>
 			<section class='p-8'>
@@ -18,12 +52,16 @@ export default function ErrorDisplay(err: unknown, reset: () => void) {
 				</button>
 				<pre class='mt-4 rounded-lg p-4 font-mono bg-dark-50 dark:bg-dark-200'>
 					<code>
-						{typeof err === 'string'
-							? err
-							: JSON.stringify(err, undefined, '\t')}
+						{typeof props.err === 'string'
+							? props.err
+							: JSON.stringify(props.err, undefined, '\t')}
 					</code>
 				</pre>
 			</section>
 		</main>
 	);
+};
+
+export function ErrorFallback(err: unknown, reset: () => void) {
+	return <ErrorDisplay err={err} reset={reset} />;
 }

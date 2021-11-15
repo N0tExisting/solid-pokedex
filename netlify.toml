@@ -24,15 +24,20 @@
 			compress = true
 
 [[redirects]]
-	# Make the SPA Work
-	from = "/*"
-	to = "/index.html"
-	status = 200
-[[redirects]]
 	# Show a hard 404 page
 	from = "/404"
 	to = "/index.html"
 	status = 404
+[[redirects]]
+	# Custom API eventually™?
+	from = "/api/*"
+	to = "/api/"
+	status = 200
+[[redirects]]
+	# Make the SPA Work
+	from = "/*"
+	to = "/index.html"
+	status = 200
 
 [[headers]]
 	for = "/*"
@@ -42,4 +47,4 @@
 [[headers]]
 	for = "/static/*"
 	[headers.values]
-		Cache-Control = "public, max-age=31536000, must-revalidat"
+		Cache-Control = "public, max-age=31536000, must-revalidate"
