@@ -18,9 +18,12 @@
 		"samverschueren.ava",
 		"dbaeumer.vscode-eslint",
 		"usernamehw.errorlens",
-		"csstools.postcss"
+		"csstools.postcss",
+		"tamasfe.even-better-toml"
 	],
 	"unwantedRecommendations": [
-		"heybourn.headwind"
+		"heybourn.headwind",
+		"bradlc.vscode-tailwindcss",
+		"austenc.tailwind-docs"
 	]
 }

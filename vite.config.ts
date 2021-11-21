@@ -3,15 +3,13 @@ import legacy from '@vitejs/plugin-legacy';
 import solidPlugin from 'vite-plugin-solid';
 import pages from 'vite-plugin-pages-solid';
 import WindiCSS from 'vite-plugin-windicss';
-//import htmlMinifier from 'rollup-plugin-html-minifier';
+import tsconfigPaths from 'vite-tsconfig-paths';
+import { minifyHtml } from 'vite-plugin-html';
 //import sri from 'rollup-plugin-sri';
-//import typescript from 'rollup-plugin-typescript2';
-import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 
 export default defineConfig({
 	plugins: [
-		//typescript(),
-		typescriptPaths({ preserveExtensions: true, absolute: false }),
+		tsconfigPaths(),
 		solidPlugin(),
 		WindiCSS(),
 		pages({
@@ -20,28 +18,17 @@ export default defineConfig({
 		}),
 		// https://vitejs.dev/plugins/#vitejs-plugin-legacy
 		legacy(),
-		/*htmlMinifier({
-			filter: (file) => {
-				const retVal =
-					typeof file === 'string'
-						? file.endsWith('.html')
-						: (console.warn('Unknown file type', file) as unknown as boolean);
-				console.log(
-					`\n${retVal ? '' : "Didn't "}Minif${retVal ? 'ied' : 'y'}`,
-					file,
-				);
-				return retVal;
-			},
-			options: {
-				collapseWhitespace: true,
-				removeComments: true,
-				decodeEntities: true,
-				minifyCSS: true,
-				minifyJS: true,
-				removeEmptyAttributes: true,
-				processConditionalComments: true,
-			},
-		}),*/
+		minifyHtml({
+			collapseWhitespace: true,
+			decodeEntities: true,
+			minifyCSS: true,
+			minifyJS: true,
+			processConditionalComments: true,
+			removeAttributeQuotes: false,
+			removeComments: true,
+			removeEmptyAttributes: true,
+			useShortDoctype: false,
+		}),
 		/*{
 			enforce: 'post',
 			...sri({
@@ -49,7 +36,6 @@ export default defineConfig({
 				algorithms: ['sha1', 'md5', 'sha512', 'sha256'],
 			}),
 		}*/
-		,
 	],
 	server: {
 		watch: {

@@ -4,12 +4,14 @@
 		"@typescript-eslint/eslint-plugin",
 		"eslint-plugin-tsdoc",
 		"solid",
+		"jsx-a11y"
 		"prettier"
 	],
 	"extends": [
 		"eslint:recommended",
     	"plugin:@typescript-eslint/recommended",
-		"plugin:solid/recommended"
+		"plugin:solid/recommended",
+		"plugin:jsx-a11y/recommended"
     ],
 	"rules": {
 		"tsdoc/syntax": "warn"

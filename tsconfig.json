@@ -37,14 +37,23 @@
 			"$route/*": [
 				"./src/routes/*"
 			],
+			"$comp/*": [
+				"./src/components/*"
+			],
+			"$layout/*": [
+				"./src/layouts/*"
+			],
 			"$util/*": [
 				"./src/utils/*"
+			],
+			"$err/*": [
+				"./src/errors/*"
 			],
 			"$style/*": [
 				"./src/styles/*"
 			],
-			"$static/*": [
-				"./static/*"
+			"$asset/*": [
+				"./src/assets/*"
 			],
 			"$package": [
 				"./package.json"
