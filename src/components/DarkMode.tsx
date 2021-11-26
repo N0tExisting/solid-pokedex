@@ -52,16 +52,16 @@ export const Toggle: Component = () => {
 	return (
 		<button
 			title={title()}
-			type='button'
+			type="button"
 			class={styles.btn}
 			onContextMenu={onRightClick}
 			onclick={toggle}>
 			<Switch>
 				<Match when={darkMode()}>
-					<FiSun title='Enable Light Mode' class={styles.icon} size={24} />
+					<FiSun title="Enable Light Mode" class={styles.icon} size={24} />
 				</Match>
 				<Match when={!darkMode()}>
-					<FiMoon title='Enable Dark Mode' class={styles.icon} size={24} />
+					<FiMoon title="Enable Dark Mode" class={styles.icon} size={24} />
 				</Match>
 			</Switch>
 		</button>

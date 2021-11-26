@@ -18,7 +18,11 @@
 		"build": "vite build",
 		"serve": "vite preview",
 		"test": "c8 ava -v --config ./ava.config.cjs",
-		"test:watch": "ava -v -w --config ./ava.config.cjs"
+		"test:watch": "ava -v -w --config ./ava.config.cjs",
+		"format": "prettier -w -l **/*.{json,js,jsx,ts,tsx}",
+		"format:check": "prettier -c",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx,.json --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives",
+		"lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx,.json --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives"
 	},
 	"dependencies": {
 		"@antfu/utils": "^0.3.0",

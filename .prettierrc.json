@@ -1,9 +1,8 @@
 {
 	"arrowParens": "always",
 	"embeddedLanguageFormatting": "auto",
-	"jsxBracketSameLine": true,
 	"bracketSameLine": true,
-	"jsxSingleQuote": true,
+	"jsxSingleQuote": false,
 	"singleQuote": true,
 	"trailingComma": "all",
 	"useTabs": true,

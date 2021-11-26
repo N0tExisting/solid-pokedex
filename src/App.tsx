@@ -11,13 +11,13 @@ const App: Component = () => {
 
 	return (
 		<Boundary>
-			<div class='h-full transition-colors ease-in-out duration-50'>
-				<Meta name='viewport' content='width=device-width, initial-scale=1' />
-				<Meta name='theme-color' content='#000000' />
+			<div class="h-full transition-colors ease-in-out duration-50">
+				<Meta name="viewport" content="width=device-width, initial-scale=1" />
+				<Meta name="theme-color" content="#000000" />
 
 				<Nav />
 
-				<div class='h-full bg-gray-100 text-gray-700 dark:(text-gray-100 bg-gray-700)'>
+				<div class="h-full bg-gray-100 text-gray-700 dark:(text-gray-100 bg-gray-700)">
 					<Boundary>
 						<Routes />
 					</Boundary>

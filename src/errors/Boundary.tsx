@@ -42,16 +42,16 @@ export const ErrorDisplay: Component<ErrorDisplayProps> = function (props) {
 			: defaultOnError(props.err),
 	);
 	return (
-		<main class='flex h-full w-full items-center content-center justify-center justify-items-center bg-gray-100 text-gray-700 dark:(text-gray-100 bg-gray-700)'>
-			<section class='p-8'>
-				<h1 class='text-6xl font-bold'>Error: Something went Horribly wrong</h1>
+		<main class="flex h-full w-full items-center content-center justify-center justify-items-center bg-gray-100 text-gray-700 dark:(text-gray-100 bg-gray-700)">
+			<section class="p-8">
+				<h1 class="text-6xl font-bold">Error: Something went Horribly wrong</h1>
 				<button
 					onclick={handleClick}
-					type='reset'
-					class='p-2 rounded-sm bg-red-600'>
+					type="reset"
+					class="p-2 rounded-sm bg-red-600">
 					Retry
 				</button>
-				<pre class='mt-4 rounded-lg p-4 font-mono bg-dark-50 dark:bg-dark-200'>
+				<pre class="mt-4 rounded-lg p-4 font-mono bg-dark-50 dark:bg-dark-200">
 					<code>
 						{typeof props.err === 'string'
 							? props.err

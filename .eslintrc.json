@@ -1,4 +1,5 @@
 {
+	"root": true,
 	"settings": {
 		"formComponents": [
 			// Components used as alternatives to <form> for forms, eg. <Form endpoint={ url } />

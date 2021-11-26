@@ -3,20 +3,20 @@ import { Toggle } from '$comp/DarkMode';
 
 const Nav = () => {
 	return (
-		<nav class='bg-gray-200 text-gray-900 px-4 w-screen dark:(bg-gray-800 text-gray-200)'>
-			<ul class='flex items-center'>
-				<li class='py-2 px-4'>
-					<A href='/' class='no-underline hover:underline'>
+		<nav class="bg-gray-200 text-gray-900 px-4 w-screen dark:(bg-gray-800 text-gray-200)">
+			<ul class="flex items-center">
+				<li class="py-2 px-4">
+					<A href="/" class="no-underline hover:underline">
 						Home
 					</A>
 				</li>
-				<li class='py-2 px-4'>
-					<A href='/about' class='no-underline hover:underline'>
+				<li class="py-2 px-4">
+					<A href="/about" class="no-underline hover:underline">
 						About
 					</A>
 				</li>
-				<li class='py-2 px-4'>
-					<A href='/pokemon' class='no-underline hover:underline'>
+				<li class="py-2 px-4">
+					<A href="/pokemon" class="no-underline hover:underline">
 						Pokemon
 					</A>
 				</li>
@@ -35,7 +35,7 @@ const Nav = () => {
 						</li>
 						*/}
 
-				<li class='text-sm flex items-center space-x-1 ml-auto py-2'>
+				<li class="text-sm flex items-center space-x-1 ml-auto py-2">
 					{/*
 							<label>
 								<span>URL:</span>

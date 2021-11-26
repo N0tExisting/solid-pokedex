@@ -9,6 +9,6 @@
 
 # Misc
 /.dccache
-/.vercel
+/target
 .DS_Store
 yarn-*.log

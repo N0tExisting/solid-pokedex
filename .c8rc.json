@@ -10,12 +10,7 @@
 		"json-summary",
 		"lcov"
 	],
-	"include": [
-		"src/**/*.tsx",
-		"src/**/*.ts",
-		"src/**/*.jsx",
-		"src/**/*.js"
-	],
+	"include": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.jsx", "src/**/*.js"],
 	"exclude": [
 		"node_modules/**/*",
 		"dist/**/*",

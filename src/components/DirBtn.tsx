@@ -12,14 +12,14 @@ export type DirBtnProps = {
 
 const DirBtn: Component<DirBtnProps> = (props) => {
 	return (
-		<button ref={props.ref} type='button'>
+		<button ref={props.ref} type="button">
 			{props.children || props.dir.toUpperCase()}
 			<Switch value={props.dir}>
-				<Case value='left'>
-					<span innerHTML='&larr;' />
+				<Case value="left">
+					<span innerHTML="&larr;" />
 				</Case>
-				<Case value='right'>
-					<span innerHTML='&rarr;' />
+				<Case value="right">
+					<span innerHTML="&rarr;" />
 				</Case>
 			</Switch>
 		</button>
