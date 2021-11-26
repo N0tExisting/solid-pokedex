@@ -2,6 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a577c901-ca9f-4033-ab60-42fda8482356/deploy-status)](https://solid-pokedex.netlify.app/)
 [![CI](https://github.com/N0tExisting/solid-pokedex/actions/workflows/CI.yml/badge.svg)](https://github.com/N0tExisting/solid-pokedex/actions/workflows/CI.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/n0texisting/solid-pokedex/badge)](https://www.codefactor.io/repository/github/n0texisting/solid-pokedex)
 
 ---
 
