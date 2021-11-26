@@ -9,7 +9,7 @@ export default function NotFound() {
 				<Meta name='robots' content='noindex follow' />
 				<h1 class='text-7xl font-bold'>404: Not Found</h1>
 				<p class='mt-4 text-4xl text-center'>
-					Couldn't find the page.
+					Couldn&apos;t find the page.
 					<br />
 					Did you type the URL wrong?
 					<br />

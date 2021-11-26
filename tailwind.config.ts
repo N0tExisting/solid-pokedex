@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite-plugin-windicss';
 import plugin from 'windicss/plugin';
 
+//* SEE: https://windicss.org/utilities/
+
 export default defineConfig({
 	darkMode: 'class',
 	extract: {

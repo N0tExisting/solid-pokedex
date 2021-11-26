@@ -1,6 +1,8 @@
 {
 	"cSpell.words": [
+		"antfu",
 		"cobertura",
+		"CODEOWNERS",
 		"Ivisaur",
 		"lcov",
 		"noindex",
@@ -11,6 +13,7 @@
 		"Pokedex",
 		"solidjs",
 		"teamcity",
+		"textnodes",
 		"tsdoc",
 		"untrack",
 		"vercel",

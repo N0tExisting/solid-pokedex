@@ -4,7 +4,7 @@ import { Meta } from 'solid-meta';
 //import routes from 'virtual:generated-pages-solid';
 import routes from './routes';
 import Nav from '$layout/Nav';
-import { Boundary } from './errors/Boundary';
+import { Boundary } from '$err/Boundary';
 
 const App: Component = () => {
 	const Routes = useRoutes(routes);

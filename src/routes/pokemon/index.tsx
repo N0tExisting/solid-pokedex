@@ -6,9 +6,8 @@ import {
 	Switch as Match,
 	Match as Matcher,
 } from 'solid-js';
-//import { Link as A } from 'solid-app-router'
 import PokeAPI from 'pokeapi-typescript';
-import PokemonPreview from '../../components/PokemonPreview';
+import PokemonPreview from '$comp/PokemonPreview';
 
 const PokemonPage: Component = () => {
 	const [fetched, setFetched] = createSignal(false);

@@ -19,11 +19,18 @@
 		"dbaeumer.vscode-eslint",
 		"usernamehw.errorlens",
 		"csstools.postcss",
-		"tamasfe.even-better-toml"
+		"tamasfe.even-better-toml",
+		"webben.browserslist",
+		"clinyong.vscode-css-modules",
+		"mikestead.dotenv",
+		"henry-li.vscode-import-formatter",
+		"fmenezes.vscode-codeowners-linter",
+		"jasonnutter.vscode-codeowners"
 	],
 	"unwantedRecommendations": [
 		"heybourn.headwind",
 		"bradlc.vscode-tailwindcss",
-		"austenc.tailwind-docs"
+		"austenc.tailwind-docs",
+		"dsznajder.es7-react-js-snippets"
 	]
 }

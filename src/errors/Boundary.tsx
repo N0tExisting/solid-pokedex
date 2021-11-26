@@ -1,3 +1,4 @@
+/* eslint-disable react/no-multi-comp */
 import { createEffect, ErrorBoundary, Component } from 'solid-js';
 
 const defaultOnError = (err: unknown) =>

@@ -1,8 +1,8 @@
 import { lazy } from 'solid-js';
 import type { Component } from 'solid-js';
 import type { RouteDefinition, RouteDataFunc } from 'solid-app-router';
-import { mapPath } from './utils/paths';
-import NotFound from './errors/404';
+import { mapPath } from '$util/paths';
+import NotFound from '$err/404';
 
 export type PageMod<P = unknown, D = unknown> = {
 	data?: RouteDataFunc<D>;

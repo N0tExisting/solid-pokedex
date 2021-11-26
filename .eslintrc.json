@@ -1,19 +1,71 @@
 {
+	"settings": {
+		"formComponents": [
+			// Components used as alternatives to <form> for forms, eg. <Form endpoint={ url } />
+			"Form"
+		],
+		"linkComponents": [
+			// Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+			"HyperLink",
+			"NavLink",
+			"A"
+		]
+	},
 	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
 	"plugins": [
 		"@typescript-eslint/eslint-plugin",
 		"eslint-plugin-tsdoc",
 		"solid",
-		"jsx-a11y"
+		"jsx-a11y",
+		"react",
 		"prettier"
 	],
 	"extends": [
 		"eslint:recommended",
-    	"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended",
 		"plugin:solid/recommended",
 		"plugin:jsx-a11y/recommended"
-    ],
+	],
 	"rules": {
-		"tsdoc/syntax": "warn"
+		"prettier/prettier": "warn",
+		"tsdoc/syntax": "warn",
+
+		"react/button-has-type": "warn",
+		"react/no-children-prop": "warn",
+		"react/no-multi-comp": "warn",
+		"react/no-unescaped-entities": "error",
+		"react/self-closing-comp": [
+			"warn",
+			{
+				"component": true,
+				"html": true
+			}
+		],
+		"react/no-invalid-html-attribute": "error",
+		"react/void-dom-elements-no-children": "error",
+		"react/jsx-no-script-url": "error",
+		"react/jsx-no-target-blank": [
+			"error",
+			{
+				"allowReferrer": true,
+				"enforceDynamicLinks": "always",
+				"warnOnSpreadAttributes": true,
+				"links": true,
+				"forms": true
+			}
+		],
+		"react/jsx-no-comment-textnodes": "warn",
+		"react/jsx-no-useless-fragment": [
+			"error",
+			{
+				"allowExpressions": true
+			}
+		],
+		"react/destructuring-assignment": ["error", "never"]
 	}
 }

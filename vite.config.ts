@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
 import solidPlugin from 'vite-plugin-solid';
 import pages from 'vite-plugin-pages-solid';
+import solidSvg from 'vite-plugin-solid-svg';
 import WindiCSS from 'vite-plugin-windicss';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { minifyHtml } from 'vite-plugin-html';
@@ -11,6 +12,7 @@ export default defineConfig({
 	plugins: [
 		tsconfigPaths(),
 		solidPlugin(),
+		solidSvg({ defaultExport: 'component' }),
 		WindiCSS(),
 		pages({
 			pagesDir: 'src/routes',
@@ -45,6 +47,19 @@ export default defineConfig({
 				'**/.vscode/**',
 				'**/.github/**',
 			],
+		},
+		fs: {
+			//strict: true,
+			//deny: ['.env', '.env.*', '**/*.{pem,crt}'],
+			/*allow: [
+				'index.html',
+				'LICENSE',
+				'package.json',
+				'tsconfig*.json',
+				'src/** /*',
+				'public/** /*',
+				'** /node_modules/** /*',
+			],*/
 		},
 	},
 	build: {
