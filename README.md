@@ -3,10 +3,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a577c901-ca9f-4033-ab60-42fda8482356/deploy-status)](https://solid-pokedex.netlify.app/)
 [![CI](https://github.com/N0tExisting/solid-pokedex/actions/workflows/CI.yml/badge.svg)](https://github.com/N0tExisting/solid-pokedex/actions/workflows/CI.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/n0texisting/solid-pokedex/badge)](https://www.codefactor.io/repository/github/n0texisting/solid-pokedex)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1566a3adfe344b03b2bc06f050fba3e5)](https://www.codacy.com/gh/N0tExisting/solid-pokedex/dashboard)
 
 ---
 
-A Pokedex built using [Solid.js](https://solidjs.com) & [PokéAPI](https://pokeapi.co/)
+A Pokedex built using [Solid.js](https://solidjs.com) and the [PokéAPI](https://pokeapi.co/)
 
 ## Development
 
@@ -34,8 +35,7 @@ The page will reload if you make edits.
 Builds the app for production to the `dist` folder.\
 It correctly bundles Solid in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes.
 
 ## Deployment
 
