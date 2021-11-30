@@ -60,11 +60,5 @@
 	"evenBetterToml.formatter.indentEntries": true,
 	"evenBetterToml.formatter.indentTables": true,
 	"evenBetterToml.schema.links": true,
-	"eslint.packageManager": "yarn",
-	"eslint.execArgv": [
-		"--cache",
-		"--cache-location",
-		"node_modules/.cache/.eslintcache",
-		"--report-unused-disable-directives"
-	]
+	"eslint.packageManager": "yarn"
 }

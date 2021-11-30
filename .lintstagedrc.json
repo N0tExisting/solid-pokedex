@@ -1,0 +1,6 @@
+{
+	"*.(mjs|cjs|js|jsx|ts|tsx|json|yml|yaml|md)": ["prettier --write"],
+	"*.(js|jsx|ts|tsx)": [
+		"eslint --fix --ext .js,.jsx,.ts,.tsx --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives"
+	]
+}
