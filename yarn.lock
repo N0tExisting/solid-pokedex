@@ -4814,10 +4814,10 @@ vite-plugin-html@^2.1.1:
     fs-extra "^10.0.0"
     html-minifier-terser "^5.1.1"
 
-vite-plugin-pages-solid@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pages-solid/-/vite-plugin-pages-solid-0.0.1.tgz#282e446ebd9dabe9ac8661427f55fa2f9ca8a690"
-  integrity sha512-Xps+7hb0a/4pscl34N7vVdtmubgrBzi5gj3m1CDgE7sqfCSsqta0wGeLKix8bbyvAivBjVlklEPjlJ0XAsTT7A==
+vite-plugin-pages-solid@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pages-solid/-/vite-plugin-pages-solid-0.0.2.tgz#0b150de8660e5bbdd392a8be8d592dc0be26b25a"
+  integrity sha512-NMSsD9ufIO0pehIzZa0gMgAT2LZBThqviFUIUoeLKBORhpNB7NqdixcnDOJNhbPj3lU9UMZm2t4hLDAxss/3Pg==
   dependencies:
     debug "4.3.2"
 

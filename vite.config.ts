@@ -16,7 +16,9 @@ export default defineConfig({
 		WindiCSS(),
 		pages({
 			pagesDir: 'src/routes',
-			extensions: ['.jsx', '.tsx'],
+			//extensions: ['.jsx', '.tsx'],
+			importMode: 'async',
+			syncIndex: false,
 		}),
 		// https://vitejs.dev/plugins/#vitejs-plugin-legacy
 		legacy(),
